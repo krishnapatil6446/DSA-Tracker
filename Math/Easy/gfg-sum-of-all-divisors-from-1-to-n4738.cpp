@@ -9,10 +9,12 @@ class Solution {
     long long sumOfDivisors(long long n) {
         // Code here
         long long sum=0;
+        
         for(int i=1; i<=n; i++){
             long long temp_sum=0;
             int j=i;
             while(j>0){
+                
                 if(i%j==0){
                     temp_sum+=j;
                 }
