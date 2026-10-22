@@ -5,20 +5,32 @@
 // Solved on  : 2026-10-22
 
 #include<bits/stdc++.h>
-using namespace std; 
-int main(){
-    int a,b;
+using namespace std;
+
+void solve() {
+    int a, b;
     cin >> a >> b;
-    if(a&&b>0){
-       if(a>b){
-        a=a%b;
-       }else{
-        b=b%a;
-       }
+
+    while(a > 0 && b > 0) {
+        if(a > b) {
+            a = a % b;
+        } else {
+            b = b % a;
+        }
     }
-    if(a==0){
+
+    if(a == 0) {
         cout << b;
-    }else{
+    } else {
         cout << a;
     }
+}
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    solve();
+    return 0;
 }
